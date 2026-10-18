@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="theme-color" content="#f8f5ed">
+	<meta name="description" content="Build a thoughtful visit plan for Marinduque's festivals, food, and island life.">
+	<title>Marinduque Festival Planner</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="style.css">
+	<script src="script.js" defer></script>
+</head>
+<body>
+	<header class="topbar">
+		<a class="wordmark" href="#top" aria-label="Marinduque Festival Planner home">
+			<span class="wordmark-mark" aria-hidden="true">M</span>
+			<span>MARINDUQUE<br><small>ISLAND VISIT PLANNER</small></span>
+		</a>
+		<a class="nav-link" href="#activities">Explore activities <span aria-hidden="true">↘</span></a>
+	</header>
+
+	<main id="top">
+		<section class="hero" aria-labelledby="hero-title">
+			<div class="hero-copy">
+				<p class="eyebrow"><span class="eyebrow-dot"></span> A little island, a lot to discover</p>
+				<h1 id="hero-title">Make room<br>for <em>Marinduque.</em></h1>
+				<p class="hero-intro">Follow the festival drums, linger over something local, and leave a little space for the unexpected.</p>
+				<a class="hero-cta" href="#activities">Plan your visit <span aria-hidden="true">↓</span></a>
+				<p class="hero-note">A sample visit · Mimaropa, Philippines</p>
+			</div>
+			<figure class="hero-image">
+				<img src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=1800&q=85" alt="Sunlight over the clear blue water of a tropical island coast">
+				<figcaption><span>13° 23′ N</span><span>Marinduque, Philippines</span></figcaption>
+			</figure>
+			<div class="hero-stamp" aria-hidden="true"><span>ISLAND<br>TIME</span><span class="stamp-sun">✳</span></div>
+		</section>
+
+		<section class="planner-section" id="activities" aria-labelledby="activities-title">
+			<div class="section-heading">
+				<div>
+					<p class="eyebrow">Your day, your way</p>
+					<h2 id="activities-title">Pick what calls to you.</h2>
+				</div>
+				<p class="section-aside">A few starting points for a festival visit. Add them to your day, then make it your own.</p>
+			</div>
+
+			<div class="planner-layout">
+				<div class="activity-browser">
+					<div class="filters" role="group" aria-label="Filter activities">
+						<button class="filter-button is-active" type="button" data-filter="all" aria-pressed="true">Everything <span>06</span></button>
+						<button class="filter-button" type="button" data-filter="culture" aria-pressed="false">Culture</button>
+						<button class="filter-button" type="button" data-filter="food" aria-pressed="false">Local table</button>
+						<button class="filter-button" type="button" data-filter="outdoors" aria-pressed="false">Outdoors</button>
+					</div>
+					<div class="activity-list" id="activity-list" aria-live="polite"></div>
+					<p class="schedule-note"><span aria-hidden="true">✳</span> Demonstration ideas and time estimates only, not an official schedule. Confirm festival dates, venues, activities, and other details with official local organizers before travelling.</p>
+				</div>
+
+				<aside class="itinerary" aria-labelledby="itinerary-title">
+					<div class="itinerary-header">
+						<div>
+							<p class="eyebrow">The good bits</p>
+							<h3 id="itinerary-title">Your day</h3>
+						</div>
+						<span class="plan-count" id="plan-count" aria-label="0 activities">00</span>
+					</div>
+					<label class="date-label" for="visit-date">When are you going?</label>
+					<input id="visit-date" class="date-input" type="date">
+					<div id="itinerary-items" class="itinerary-items" aria-live="polite">
+						<div class="empty-plan">
+							<span class="empty-sun" aria-hidden="true">✳</span>
+							<p>Your day is an open page.</p>
+							<span>Add an activity to start planning.</span>
+						</div>
+					</div>
+					<div class="plan-footer">
+						<div class="plan-total"><span>Planned time</span><strong id="planned-time">0 hours</strong></div>
+						<button class="clear-button" id="clear-plan" type="button" disabled>Clear day</button>
+					</div>
+				</aside>
+			</div>
+		</section>
+
+		<section class="respect-section" aria-labelledby="respect-title">
+			<div class="respect-intro">
+				<p class="eyebrow">Good guest energy</p>
+				<h2 id="respect-title">Take care<br>of the place.</h2>
+				<p>Festivals belong to the communities who keep them. A little care makes a better visit for everyone.</p>
+				<p class="checklist-disclaimer">These are general visitor suggestions, not official festival rules. Follow current guidance from local organizers.</p>
+			</div>
+			<div class="respect-list" id="respect-list" aria-label="Cultural visit checklist"></div>
+			<div class="respect-progress" aria-live="polite"><span id="respect-progress-fill"></span></div>
+			<p class="progress-caption" id="respect-progress-text">0 of 4 checked</p>
+		</section>
+	</main>
+
+	<footer class="footer">
+		<a class="wordmark footer-mark" href="#top"><span class="wordmark-mark" aria-hidden="true">M</span><span>MARINDUQUE<br><small>GO GENTLY. STAY CURIOUS.</small></span></a>
+		<span>Made for slower days on the island <span aria-hidden="true">✳</span></span>
+		<a href="#top" class="back-top">Back to top ↑</a>
+	</footer>
+</body>
+</html>
